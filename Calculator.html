@@ -3,94 +3,19 @@
         <head>
             <title>Calculator</title>
         </head>
-        <style>
-            body{
-                background-image:radial-gradient(white,grey);
-                border: 5px solid rgb(45, 42, 42);
-                border-radius: 10%;
-                display:inline-block;
-            }
-            button{
-                height: 100px;
-                width: 100px;
-                margin: 10px;
-                background-color:whitesmoke;
-                border-radius: 50%;
-                text-shadow: 2px 2px 2px grey;
-                box-shadow: 2px 2px 2px 2px black;
-                transition-duration:0.2s;
-            }
-            button:focus{
-                background-color: grey;
-                transition-duration: 0.1s;
-            }
-            #result{
-                height: 100px;
-                width:400px;
-            }input{
-                width:40px;
-                text-align: right;
-                box-shadow: 4px 4px 4px  4px black;
-                text-size-adjust: 200px;
-                font-size: 35px;
-                border-radius: 50%;
-            }
-
-        </style>
         <body><center>
             <h1>CALCULATOR</h1>
-            <input type="text" placeholder="0" id="result">
+            <input type="text" placeholder="0">
             <table>
                 <tr>
-                    <td><button onclick="display('7')"><h1>7</h1></button></td>
-                    <td><button onclick="display('8')"><h1>8</h1></button></td>
-                    <td><button onclick="display('9')"><h1>9</h1></button></td>
-                    <td><button onclick="display('+')"><h1>+</h1></button></td>
-                </tr>
-                <tr>
-                    <td><button onclick="display('4')"><h1>4</h1></button></td>
-                    <td><button onclick="display('5')"><h1>5</h1></button></td>
-                    <td><button onclick="display('6')"><h1>6</h1></button></td>
-                    <td><button onclick="display('-')"><h1>-</h1></button></td>
+                    <td><button>7</button></td>
+                    <td><button>8</button></td>
+                    <td><button>9</button></td>
+                    <td><button>+</button></td>
                     
                 </tr>
-                <tr>
-                    <td><button onclick="display('1')"><h1>1</h1></button></td>
-                    <td><button onclick="display('2')"><h1>2</h1></button></td>
-                    <td><button onclick="display('3')"><h1>3</h1></button></td>
-                    <td><button onclick="display('*')"><h1>*</h1></button></td>
-                    
-                </tr>
-                <tr>
-                    <td><button onclick="display('0')"><h1>0</h1></button></td>
-                    <td><button onclick="clr()"><h1>C</h1></button></td>
-                    <td><button onclick="calculate()"><h1><p>=</p></h1></button></td>
-                    <td><button onclick="display('/')"><h1>/</h1></button></td>
-                    </tr>
-                    </p>
             </table>
         </center>
-</body>
+
+        </body>
     </html>
-    <script>
-        var output=document.getElementById("result")
-        {
-            function display(num)
-            {
-            output.value+=num
-            }
-            function calculate()
-            {
-             try{
-                output.value=eval(output.value);
-             }
-             catch(err){
-                alert("Invalid")
-             }
-            }
-            function clr()
-            {
-                output.value=""
-            }
-        }
-    </script>
